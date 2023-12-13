@@ -35,7 +35,7 @@ pipeline {
         steps {
             script{
                 dir('frontend') {
-                    sh '/usr/bin/docker login -u '+DOCKERHUB_CRED_USR+' -p '+DOCKERHUB_CRED_PSW
+                    sh '/usr/bin/docker login -u "siddharth322" -p "Sidhu@123"
                     sh '/usr/bin/docker push ' +registryfrontend+':latest'
                 }
                 
@@ -70,7 +70,7 @@ pipeline {
         steps {
             script{
                 dir('backend') {
-                    sh '/usr/bin/docker login -u '+DOCKERHUB_CRED_USR+' -p '+DOCKERHUB_CRED_PSW
+                    sh '/usr/bin/docker login -u "siddharth322" -p "Sidhu@123"
                     sh '/usr/bin/docker push ' +registrybackend+':latest'
                 }
                 
