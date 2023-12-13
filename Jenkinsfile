@@ -86,5 +86,12 @@ pipeline {
             }
         }
     }
+
+    stage('Deploy') {
+        steps {
+            sh 'export PATH="/usr/bin/python3.8"'
+            sh '/usr/bin/ansible-playbook playbook.yml -i inventory'
+        }
+    }
   }  
 }
