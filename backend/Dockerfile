@@ -1,5 +1,5 @@
 # Use the base image with Node.js installed
-FROM --platform=linux/amd64 node:alpine
+FROM --platform=linux/amd64 node:18
 
 # Set the working directory to /frontend
 WORKDIR /backend
