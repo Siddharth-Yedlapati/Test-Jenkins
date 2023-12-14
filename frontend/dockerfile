@@ -1,4 +1,4 @@
-FROM --platform=linux/amd64 node:alpine
+FROM node:18.1.0
 
 # Set the working directory to /frontend
 WORKDIR /frontend
