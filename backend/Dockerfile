@@ -1,5 +1,5 @@
 # Use the base image with Node.js installed
-FROM node:14-alpine
+FROM --platform=linux/amd64 node:alpine
 RUN apk add g++ make py3-pip
 
 # Set the working directory to /frontend
