@@ -1,6 +1,5 @@
 # Use the base image with Node.js installed
 FROM --platform=linux/amd64 node:alpine
-RUN apk add g++ make py3-pip
 
 # Set the working directory to /frontend
 WORKDIR /backend
@@ -9,7 +8,6 @@ WORKDIR /backend
 COPY package*.json ./
 
 # Install the dependencies
-RUN python --version
 RUN npm install
 
 # Copy the rest of the backend code to the container
