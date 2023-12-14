@@ -6,7 +6,7 @@ RUN apk add g++ make py3-pip
 WORKDIR /backend
 
 # Copy the package.json and package-lock.json files to the container
-COPY package.json ./
+COPY package*.json ./
 
 RUN npm install -g node-gyp
 RUN npm install winston
